@@ -9,6 +9,7 @@ def find_hypotenuse(a, b):
     c = math.sqrt(csquared)
     return c
 
+# A block of code is defined by a colon : and an indent. Once you break the indent, the block of code has ended
 a = float(input("Please enter side A"))
 b = float(input("Please enter side B"))
 hyp = find_hypotenuse(a,b)
