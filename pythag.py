@@ -23,12 +23,22 @@ print("The hyptenuse is:" + str(hyp))
 #STUDENT ACTIVITY
 
 #WRITE A FUNCTION
-def hero_name
+def hero_name(movie, food):
+    n = movie+food
+    return n
 
-#ACTION HERO NAME: (first name of a main character in the last movie you watched, last food you ate)
-#CRIMINAL NAME: (name of your favorite perfume/cologne, favorite candy bar)
-#DETECTIVE NAME:(favorite color, favorite animal)
+m = input("What was the last movie you watched? ")
+f = input("What was the last food you ate? ") 
+
+h = hero_name(m,f)
+print("You hero name is: " + h)
 
 #WRITE A FUNCTION THAT WILL CALCULATE THE AREA OF A CIRCLE 
-def area_circle
+def area_circle(radius):
+    a = math.pi*radius*radius
+    return a 
+
+rad = float(input("Please enter your radius: "))
+area = area_circle(rad)
+print("Area of the circle is: " + str(area))
 
