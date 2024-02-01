@@ -2,10 +2,12 @@
 # A function is defined by the NAME and round brackets ()
 # Some functions have INPUTs and give OUTPUTs
 import math
-y = 1000
+import mylib
+
+y = 1000 #A global variable is defined outside any block of code and is available anywhere. 
+print(mylib.y)
 
 def find_hypotenuse(a, b):
-    print(y)
     csquared = a*a + b*b
     c = math.sqrt(csquared)
     return c
@@ -17,4 +19,16 @@ f = float(input("Please enter side B"))
 hyp = find_hypotenuse(e,f)
 print("The hyptenuse is:" + str(hyp))
 
-print(c)
+
+#STUDENT ACTIVITY
+
+#WRITE A FUNCTION
+def hero_name
+
+#ACTION HERO NAME: (first name of a main character in the last movie you watched, last food you ate)
+#CRIMINAL NAME: (name of your favorite perfume/cologne, favorite candy bar)
+#DETECTIVE NAME:(favorite color, favorite animal)
+
+#WRITE A FUNCTION THAT WILL CALCULATE THE AREA OF A CIRCLE 
+def area_circle
+
