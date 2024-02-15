@@ -15,7 +15,6 @@ def square(length):
         turtle_object.right(90)
     return
 
-red = 255
 for a in range(0,720,10):
     square(a/2)
     turtle_object.right(10)
