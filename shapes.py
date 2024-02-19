@@ -1,12 +1,8 @@
 import turtle
-
-turtle.colormode(255)
+import random
 turtle.bgcolor("black")
 turtle_object = turtle.Turtle()
-
 turtle_object.goto(0,0)
-turtle_object.pendown()
-turtle_object.color("red")
 turtle_object.speed(100)
 
 def square(length):
@@ -15,24 +11,33 @@ def square(length):
         turtle_object.right(90)
     return
 
-#create a function that will take the number of sides
-#length of each side,
-#colour
-#draw the shape
-#turtle_object.fillcolor()
-#turtle_object.begin_fill()
-#turtle_object.end_fill()
 def shape(length, num_sides, colour, vec):
+    global turtle_object
     turtle_object.goto(vec)
-    turtle_object.fillcolor = colour
+    turtle_object.pencolor("white")
+    turtle_object.pendown()
+    turtle_object.fillcolor(colour)
     turtle_object.begin_fill()
     angle = int(360/num_sides)
     for s in range(num_sides):
         turtle_object.forward(length)
         turtle_object.right(angle)
     turtle_object.end_fill()
+    turtle_object.penup()
+    return
 
 shape(20, 7, "red", (0,0))
+
+
+colourlist = ['red','blue','green','purple','yellow','orange']
+
+#special for loop where loop through values inside a list
+for colour in colourlist:
+    x = random.randint(-400,400)
+    y = random.randint(-300,300)
+    vec = (x,y)
+    shape(50, 4, colour, vec)
+
 
 
 
