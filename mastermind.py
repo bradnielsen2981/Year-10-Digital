@@ -12,6 +12,22 @@ code = code.split(" ")
 #second player choose 4 colours
 playercode = input("Choose 4 colours from red,green,blue,yellow,black and white. (Type them in a sequence separated by a space): ")
 playercode = playercode.split(" ")
+while playercode != code:
+    num_correct = 0
+    num_sequence_correct = 0
+    for colour in code:
+        #compare it against the colours in playercode.
+        for playercolour in playercode:
+            if colour == playercolour:
+                num_correct = num_correct + 1
+    print("Number correct: ", num_correct)            
+    for index in range(4):
+        colour = code[index]
+        playercolour = playercode[index]
+        if playercolour == colour:
+            num_sequence_correct = num_sequence_correct + 1
+    print("In sequence: ", num_sequence_correct)
+    playercode = input("Choose 4 colours from red,green,blue,yellow,black and white. (Type them in a sequence separated by a space): ")
+    playercode = playercode.split(" ")
 
-for colour in code:
-    print(colour)
+print("Congratulations you won!!!")
