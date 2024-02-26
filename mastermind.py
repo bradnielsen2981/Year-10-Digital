@@ -29,5 +29,4 @@ while playercode != code:
     print("In sequence: ", num_sequence_correct)
     playercode = input("Choose 4 colours from red,green,blue,yellow,black and white. (Type them in a sequence separated by a space): ")
     playercode = playercode.split(" ")
-
 print("Congratulations you won!!!")
