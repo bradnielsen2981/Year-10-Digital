@@ -1,0 +1,50 @@
+HIGHER AND LOWER GAME
+
+Pseudocode level 0 - write down the main elements of the problem
+BEGIN
+    computer chooses a random number
+    player repeatedly has guesses at number until guess = number
+    player is told higher or lower after every guess
+END
+
+Pseudocode level 1 - break down the main elements
+BEGIN
+    SET number = random number between 1-100
+    INPUT guess
+    WHILE guess not equal to number
+        IF guess > number:
+            OUTPUT lower
+        ELSE IF guess < number
+            OUTPUT higher
+    OUTPUT 'well done you guessed the number 
+END
+
+>>WHERE IS THE LOGIC ERROR - CHECK THE ALGORITHM
+
+BEGIN
+    SET number = random number between 1-100
+    INPUT guess
+    WHILE guess not equal to number
+        IF guess > number:
+            OUTPUT lower
+        ELSE IF guess < number
+            OUTPUT higher
+        INPUT guess
+    OUTPUT 'well done you guessed the number 
+END
+
+Pseudocode level 2 - add more to the problem
+BEGIN
+    SET number_of_lives = 7 
+    SET number = random number between 1-100
+    INPUT guess
+    WHILE (guess not equal to number) AND (number_of_lives > 0)
+        number_of_lives = number_of_lives - 1 
+        IF guess > number:
+            OUTPUT lower
+        ELSE IF guess < number
+            OUTPUT higher
+        INPUT GUESS
+    IF number_of_lives > 0
+        OUTPUT 'well done you guessed the number' 
+END

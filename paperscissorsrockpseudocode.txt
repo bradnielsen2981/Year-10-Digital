@@ -1,0 +1,79 @@
+Pseudocode level 0 - broad outline of the problm
+
+BEGIN
+    computer choose a random move from paper scissor rock
+    human inputs a move from paper scissors or rock
+    do logic to determine the winner using (Rock beat Scissors beats Paper beats..)
+    Repeat until player wants to exit
+END
+
+Pseudocode level 1a - break it down more
+BEGIN
+    SET playermove = '' 
+    movelist = ['paper','scissors','rock]
+    WHILE playermove != 'exit'
+        IF playermove not in movelist
+            INPUT playermove
+            CONTINUE
+        SET computermove = random item from movelist
+        do logic to determine the winner using (Rock beat Scissors beats Paper beats..)
+        INPUT playermove
+END
+
+Pseudocode level 1b - break it down even more
+BEGIN
+    SET playermove = '' 
+    movelist = ['paper','scissors','rock]
+    WHILE playermove != 'exit'
+        
+        IF playermove not in movelist
+            INPUT playermove
+            CONTINUE //skip the rest of the loop
+        SET computermove = random item from movelist
+        
+        IF computermove equals playermove
+
+            OUTPUT draw
+
+        ELSE IF (computermove equals 'rock' AND player equals 'scissors')
+            OR (computermove equals 'scissors' AND player equals 'paper')
+            OR (computermove equals 'paper' AND player equals 'rock')
+
+            OUTPUT computer wins
+        ELSE
+            OUTPUT player wins
+
+        INPUT playermove
+END   
+
+Pseudocode level 2 - add to it
+BEGIN
+    SET playerscore = 0
+    SET computerscore = 0 
+    SET playermove = '' 
+    movelist = ['paper','scissors','rock]
+    WHILE playermove != 'exit'
+        
+        IF playermove not in movelist
+            INPUT playermove
+            CONTINUE //skip the rest of the loop
+        SET computermove = random item from movelist
+        
+        IF computermove equals playermove
+
+            OUTPUT draw
+
+        ELSE IF (computermove equals 'rock' and player equals 'scissors')
+            OR (computermove equals 'scissors' and player equals 'paper')
+            OR (computermove equals 'paper' and player equals 'rock')
+
+            OUTPUT computer wins
+            computerscore = computerscore + 1
+        ELSE
+            OUTPUT player wins
+            playerscore = playerscore + 1
+
+        OUTPUT scores
+        INPUT playermove
+END   
+
