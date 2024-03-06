@@ -14,8 +14,7 @@ turtle_object.goto(startx,starty)
 
 #draw a square
 def square(length, column, row):
-    turtle_object.goto(startx + column*100, starty+row*100)
-
+    turtle_object.goto(startx+column*100, starty+ row*-100)
     turtle_object.pensize(1)
     turtle_object.pencolor("white")
     turtle_object.pendown()
@@ -27,7 +26,7 @@ def square(length, column, row):
 
 #draw a cross
 def cross(length, column, row):
-    turtle_object.goto(startx + column*100, starty+row*100)
+    turtle_object.goto(startx+column*100 + 10, starty+ row*-100 -10)
 
     turtle_object.pendown()
     turtle_object.pensize(5)
@@ -47,7 +46,7 @@ def cross(length, column, row):
 
 #draw a circle
 def circle(radius, column, row):
-    turtle_object.goto(startx + column*100, starty+row*100)
+    turtle_object.goto(startx+column*100 + 80, starty+ row*-100 - 80)
 
     turtle_object.pendown()
     turtle_object.pencolor("green")
@@ -57,19 +56,13 @@ def circle(radius, column, row):
 
 def draw_grid():
     for row in range(3):
-        for cell in range(3):
-            square(100)
-            turtle_object.forward(100)
-        turtle_object.right(180)
-        turtle_object.forward(300)
-        turtle_object.right(180)
-        turtle_object.right(90)
-        turtle_object.forward(100)
-        turtle_object.left(90)
+        for column in range(3):
+            square(100,column,row)
     return
 
-#draw_grid()
+draw_grid()
 cross(100,1,1)
+circle(45,2,2)
 
 input()
 
