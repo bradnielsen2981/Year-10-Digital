@@ -7,10 +7,15 @@ print("\033c")
 import turtle
 turtle.bgcolor("black")
 turtle_object = turtle.Turtle()
-turtle_object.goto(-150,150)
+turtle_object.speed(0)
+startx = -150
+starty = 150
+turtle_object.goto(startx,starty)
 
 #draw a square
-def square(length):
+def square(length, column, row):
+    turtle_object.goto(startx + column*100, starty+row*100)
+
     turtle_object.pensize(1)
     turtle_object.pencolor("white")
     turtle_object.pendown()
@@ -21,7 +26,9 @@ def square(length):
     return
 
 #draw a cross
-def cross(length):
+def cross(length, column, row):
+    turtle_object.goto(startx + column*100, starty+row*100)
+
     turtle_object.pendown()
     turtle_object.pensize(5)
     turtle_object.pencolor("red")
@@ -39,7 +46,9 @@ def cross(length):
     return
 
 #draw a circle
-def circle(radius):
+def circle(radius, column, row):
+    turtle_object.goto(startx + column*100, starty+row*100)
+
     turtle_object.pendown()
     turtle_object.pencolor("green")
     turtle_object.pensize(5)
@@ -60,5 +69,7 @@ def draw_grid():
     return
 
 #draw_grid()
+cross(100,1,1)
+
 input()
 
