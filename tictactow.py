@@ -12,6 +12,11 @@ startx = -150
 starty = 150
 turtle_object.goto(startx,starty)
 
+        # 0, 1, 2
+grid = [['_','_','_'], #0
+        ['_','_','_'], #1
+        ['_','_','_']] #2
+
 #draw a square
 def square(length, column, row):
     turtle_object.goto(startx+column*100, starty+ row*-100)
@@ -61,8 +66,22 @@ def draw_grid():
     return
 
 draw_grid()
-cross(100,1,1)
-circle(45,2,2)
+
+whoseturn = 1
+turn = input("Please say which column and row, separate with a space (1-3): ")
+turn = turn.split(" ") #turn is ["column","row"]
+column = int(turn[0]) - 1
+row = int(turn[1]) - 1
+
+grid[column][row] = whoseturn
+print(grid)
+
+if whoseturn == 1:
+    cross(100, column, row)
+    whoseturn = 2
+elif whoseturn == 2:
+    circle(80, column, row)
+    whoseturn = 1
 
 input()
 
